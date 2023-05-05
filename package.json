@@ -4,7 +4,7 @@
   "description": "Telegram bot starter based on grammY",
   "main": "dist/app.js",
   "repository": "https://github.com/SecretLodge/admin-scoutai-telegrambot",
-  "author": "notuchmeplz,
+  "author": "notuchmeplz <boxofmonster@mail.ru>,
   "license": "MIT",
   "scripts": {
     "distribute": "yarn build-ts && node dist/app.js",
