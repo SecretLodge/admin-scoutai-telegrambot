@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "Telegram bot starter based on grammY",
   "main": "dist/app.js",
-  "repository": "https://github.com/Borodutch/telegram-bot-template",
-  "author": "backmeupplz <backmeupplz@gmail.com>",
+  "repository": "https://github.com/SecretLodge/admin-scoutai-telegrambot",
+  "author": "notuchmeplz,
   "license": "MIT",
   "scripts": {
     "distribute": "yarn build-ts && node dist/app.js",
