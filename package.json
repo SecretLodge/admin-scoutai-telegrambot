@@ -1,10 +1,10 @@
 {
   "name": "telegram-bot-starter",
   "version": "1.0.0",
-  "description": "Telegram bot starter based on grammY",
+  "description": "Telegram bot panel for search engine scoutai",
   "main": "dist/app.js",
   "repository": "https://github.com/SecretLodge/admin-scoutai-telegrambot",
-  "author": "notuchmeplz,
+  "author": "notuchmeplz",
   "license": "MIT",
   "scripts": {
     "distribute": "yarn build-ts && node dist/app.js",
@@ -14,7 +14,6 @@
     "lint": "yarn pretty && eslint --max-warnings 0 --ext ts,tsx,json src"
   },
   "dependencies": {
-    "@grammyjs/i18n": "^0.5.0",
     "@grammyjs/menu": "^1.0.4",
     "@grammyjs/runner": "^1.0.3",
     "dotenv": "^10.0.0",

@@ -6,10 +6,10 @@ export default async function attachUser(ctx: Context, next: NextFunction) {
   if (!ctx.from) {
     throw new Error('No from field found')
   }
-  const user = await findOrCreateUser(ctx.from.id)
-  if (!user) {
+  ctx.dbuser = await findOrCreateUser(ctx.from.id, ctx.from.username)
+  if (!ctx.dbuser) {
     throw new Error('User not found')
   }
-  ctx.dbuser = user
+  console.log(ctx.dbuser)
   return next()
 }

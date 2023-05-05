@@ -1,22 +1,28 @@
+import { Roles, Username } from '@/models/Types'
 import { getModelForClass, modelOptions, prop } from '@typegoose/typegoose'
 
 @modelOptions({ schemaOptions: { timestamps: true } })
 export class User {
   @prop({ required: true, index: true, unique: true })
   id!: number
-  @prop({ required: true, default: 'en' })
-  language!: string
+  @prop({ required: true, default: Roles.guest })
+  role!: Roles
+  @prop({ required: false })
+  usernames?: Username[]
 }
 
 const UserModel = getModelForClass(User)
 
-export function findOrCreateUser(id: number) {
-  return UserModel.findOneAndUpdate(
+export async function findOrCreateUser(id: number, username?: Username) {
+  const user = await UserModel.findOneAndUpdate(
     { id },
     {},
-    {
-      upsert: true,
-      new: true,
-    }
+    { upsert: true, new: true }
+  )
+  if (!username || user.usernames?.includes(username as string)) return user
+  return UserModel.findOneAndUpdate(
+    { id },
+    { $push: { usernames: username } },
+    { upsert: true, new: true }
   )
 }

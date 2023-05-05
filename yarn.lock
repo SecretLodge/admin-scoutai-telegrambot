@@ -22,17 +22,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@grammyjs/i18n@npm:^0.5.0":
-  version: 0.5.0
-  resolution: "@grammyjs/i18n@npm:0.5.0"
-  dependencies:
-    compile-template: ^0.3.1
-    debug: ^4.0.1
-    js-yaml: ^4.0.0
-  checksum: 31c9abb98f22b573052bebbef3597d3ba536c4aa39e977586cfb0353781d2bca3157560c22fc7a27a89fa8c604f0ae77a0ac8bc1b6c117102bfd9319747755c4
-  languageName: node
-  linkType: hard
-
 "@grammyjs/menu@npm:^1.0.4":
   version: 1.0.4
   resolution: "@grammyjs/menu@npm:1.0.4"
@@ -472,13 +461,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"compile-template@npm:^0.3.1":
-  version: 0.3.1
-  resolution: "compile-template@npm:0.3.1"
-  checksum: 0ed10062ac1460d0ece5a9b871f124fd235a278aa25f1c6a696c9c22030de3869ce3db8c286ee3cdb5a731469c9ad708279c8b59fe903f68a549f8628611a985
-  languageName: node
-  linkType: hard
-
 "concat-map@npm:0.0.1":
   version: 0.0.1
   resolution: "concat-map@npm:0.0.1"
@@ -497,7 +479,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"debug@npm:4.x, debug@npm:^4.0.1, debug@npm:^4.1.1, debug@npm:^4.3.2, debug@npm:^4.3.3":
+"debug@npm:4.x, debug@npm:^4.1.1, debug@npm:^4.3.2, debug@npm:^4.3.3":
   version: 4.3.3
   resolution: "debug@npm:4.3.3"
   dependencies:
@@ -1410,7 +1392,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"js-yaml@npm:^4.0.0, js-yaml@npm:^4.1.0":
+"js-yaml@npm:^4.1.0":
   version: 4.1.0
   resolution: "js-yaml@npm:4.1.0"
   dependencies:
@@ -2131,7 +2113,6 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "telegram-bot-starter@workspace:."
   dependencies:
-    "@grammyjs/i18n": ^0.5.0
     "@grammyjs/menu": ^1.0.4
     "@grammyjs/runner": ^1.0.3
     "@typegoose/typegoose": ^9.3.1
