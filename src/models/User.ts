@@ -5,13 +5,15 @@ import { getModelForClass, modelOptions, prop } from '@typegoose/typegoose'
 export class User {
   @prop({ required: true, index: true, unique: true })
   id!: number
-  @prop({ required: true, default: Roles.guest })
+  @prop({ required: true, default: Roles.Guest })
   role!: Roles
   @prop({ required: false })
   usernames?: Username[]
+  @prop({ required: true, default: false })
+  requested!: boolean
 }
 
-const UserModel = getModelForClass(User)
+export const UserModel = getModelForClass(User)
 
 export async function findOrCreateUser(id: number, username?: Username) {
   const user = await UserModel.findOneAndUpdate(

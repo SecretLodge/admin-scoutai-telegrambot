@@ -10,6 +10,5 @@ export default async function attachUser(ctx: Context, next: NextFunction) {
   if (!ctx.dbuser) {
     throw new Error('User not found')
   }
-  console.log(ctx.dbuser)
   return next()
 }
